@@ -1,10 +1,14 @@
 import React from 'react'
 import Container from '../Container/Container'
+import TopBar from './TopBar'
 
 function Navbar() {
-  return (
-    <Container>Navbar</Container>
-  )
+    return (
+        <div>
+            
+            <TopBar/>
+        </div>
+    )
 }
 
 export default Navbar
