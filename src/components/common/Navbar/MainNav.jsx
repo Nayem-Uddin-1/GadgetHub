@@ -26,7 +26,7 @@ function MainNav() {
               <FaRegHeart />
               Wishlist
             </button>
-            <button className='text-white flex gap-2 items-center justify-center'>
+            <button className='text-white  flex gap-2 items-center justify-center'>
               <FaCodeCompare />
               Compare
             </button>

@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
 
- 
+
 
 .logoFont {
   font-family: 'Bebas Neue', sans-serif;
-   
+
+}
+
+
+.card-ul {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+
+.slick-arrow .slick-next{
+  border: 1px solid red;
 }
