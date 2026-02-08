@@ -55,7 +55,7 @@ function Banner() {
     return (
         <Container>
             <div className="flex gap-3 mt-10 ">
-                <div className='w-[30%] h-122.25 rounded bg-white relative ' >
+                <div className='w-[20%] h-122.25 rounded bg-white relative ' >
 
                     {/* main category list */}
                     <ul onMouseEnter={() => setDisModal(true)} className='flex gap-2 items-center border-b-2 p-5 cursor-pointer border-gray-300 ' >
@@ -70,9 +70,9 @@ function Banner() {
                     {/* subcategory list */}
                     {
                         disModal &&
-                        <div ref={subCategoryRef} >
+                        <div ref={subCategoryRef} className='z-1000'  >
                             <ul
-                                className='w-50 card-ul bg-white shadow-2xs rounded absolute -right-50 top-0  '>
+                                className='w-50 card-ul bg-white shadow-2xs rounded absolute -right-50 top-0 z-100 '>
 
                                 <li className='flex justify-between hover:bg-gray-200 items-center w-full cursor-pointer group p-5 ' >
                                     <span className='group-hover:border-b group-hover:border-dotted'>Phones</span>
@@ -97,7 +97,7 @@ function Banner() {
 
 
 
-                <div className='w-[40%] h-122.25 border ' >
+                <div className='w-[60%] h-122.25 border ' >
                     <div className="border h-full w-full ">
                         <Slider {...settings}>
                             {items.map((item) => (
@@ -108,7 +108,7 @@ function Banner() {
                         </Slider>
                     </div>
                 </div>
-                <div className='w-[30%] h-122.25 border' >3</div>
+                <div className='w-[20%] h-122.25 border' >3</div>
             </div>
 
         </Container>
