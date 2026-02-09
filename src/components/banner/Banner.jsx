@@ -45,12 +45,24 @@ function Banner() {
         autoplaySpeed: 2000,  // autoplay interval in ms
         arrows: true,         // show next/prev arrows
     };
-     
+
     const items = [
-    { id: 1, text: "Slide 1" },
-    { id: 2, text: "Slide 2" },
-    { id: 3, text: "Slide 3" },
-   ];
+        {
+            id: 1,
+            text: "Slide 1",
+            img: "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/e503e7a78dc47849.webp/370-220-w/catalog/journal3/assets/demos/5/v1/Banners/4.jpg",
+        },
+        {
+            id: 2,
+            text: "Slide 2",
+            img: "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/cd1dc0119ed5a85c.webp/370-220-w/catalog/journal3/assets/demos/5/v1/Banners/2.jpg",
+        },
+        {
+            id: 3,
+            text: "Slide 3",
+            img: "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/a8f0919f2ae9e90e.webp/370-220-h/catalog/journal3/assets/demos/5/v1/Banners/3.png",
+        },
+    ];
 
     return (
         <Container>
@@ -97,17 +109,23 @@ function Banner() {
 
 
 
-                <div className='w-[60%] h-122.25 border ' >
-                    <div className="border h-full w-full ">
-                        <Slider {...settings}>
-                            {items.map((item) => (
-                                <div key={item.id} className="p-4 bg-gray-200 text-center rounded">
-                                    {item.text}
+                <div className='w-[60%] h-122.25 banner-slider ' >
+                    <Slider {...settings}>
+                        {items.map((item) => (
+                            <div key={item.id} className=" w-full h-122.25">
+                                <div className="relative w-full h-full rounded overflow-hidden">
+                                    <img
+                                        src={item.img}
+                                        alt={item.text}
+                                        className="w-full h-full object-cover"
+                                    />                                  
                                 </div>
-                            ))}
-                        </Slider>
-                    </div>
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
+
+
                 <div className='w-[20%] h-122.25 border' >3</div>
             </div>
 

@@ -15,6 +15,29 @@
 }
 
 
-.slick-arrow .slick-next{
-  border: 1px solid red;
+
+.banner-slider .slick-prev,
+.banner-slider .slick-next {
+  top: auto;
+  bottom: 15px;
+
+  width: 50px !important;
+  height: 50px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: black !important;
+  border-radius: 9999px !important;
+  z-index: 10 !important;
+}
+
+.banner-slider .slick-prev {
+  left: auto !important;
+  right: 80px !important;
+}
+
+.banner-slider .slick-next {
+  right: 20px !important;
 }
