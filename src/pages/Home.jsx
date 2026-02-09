@@ -5,22 +5,22 @@ import CategoryCards from '../components/common/Navbar/searchbar/CategoryCards/C
 import FeatureBar from '../components/FeatureBar/FeatureBar'
 import CommonFeaturedProduct from '../components/CommonFeaturedProductDisplay/CommonFeaturedProduct'
 import PromoBanner from '../components/PromoBanner/PromoBanner'
-import SecondaryProduct from '../Products/SecondaryProduct'
+import NewArrival from '../components/newarrival/NewArrival'
 
 function Home() {
   return (
     <>
-     <Navbar/>
-     <Banner/>
-     <CategoryCards/>
-     <FeatureBar/>
-     <SecondaryProduct/>
-     <CommonFeaturedProduct/>
-     <PromoBanner/>
+      <Navbar />
+      <Banner />
+      <CategoryCards />
+      <NewArrival />
+      <FeatureBar />
+      <CommonFeaturedProduct />
+      <PromoBanner />
 
-   
 
-     
+
+
     </>
   )
 }
