@@ -66,8 +66,10 @@ function Banner() {
 
     return (
         <Container>
-            <div className="flex gap-3 mt-10 ">
-                <div className='w-[20%] h-122.25 rounded bg-white relative ' >
+            <div className="md:flex gap-3 mt-10 ">
+
+
+                <div className='w-[20%] hidden md:block h-122.25 rounded bg-white relative ' >
 
                     {/* main category list */}
                     <ul onMouseEnter={() => setDisModal(true)} className='flex gap-2 items-center border-b-2 p-5 cursor-pointer border-gray-300 ' >
@@ -106,10 +108,7 @@ function Banner() {
                 </div>
 
 
-
-
-
-                <div className='w-[60%] h-122.25 banner-slider ' >
+                <div className=' min-w-[312px] h-[150px] px-5 md:w-[60%] md:h-122.25 banner-slider ' >
                     <Slider {...settings}>
                         {items.map((item) => (
                             <div key={item.id} className=" w-full h-122.25">
@@ -117,7 +116,7 @@ function Banner() {
                                     <img
                                         src={item.img}
                                         alt={item.text}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-[150px] md:h-full object-cover"
                                     />                                  
                                 </div>
                             </div>
@@ -125,8 +124,7 @@ function Banner() {
                     </Slider>
                 </div>
 
-
-                <div className='w-[20%] h-122.25 border' >3</div>
+                <div className='w-[20%] hidden md:block h-122.25 border' >3</div>
             </div>
 
         </Container>

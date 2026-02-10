@@ -5,20 +5,20 @@ import { cardsdata } from './cardData'
 
 
 function CategoryCards() {
-  return (
+  return (  
     <Container>
-      <div className="bg-gray-100 mt-10 ">
-        <div className="flex justify-between">
+      <div className="bg-gray-100 mt-10 px-5 md:px-0  ">
+        <div className="flex flex-col gap-5 md:flex-row   justify-between">
           {cardsdata.map((item) => (
             <div
               key={item.id}
-              className="relative w-[371px] h-64 rounded overflow-hidden group cursor-pointer shadow-lg"
+              className="relative w-[300px] md:w-[371px] h-64  rounded overflow-hidden group cursor-pointer shadow-lg"
             >
               {/* Background Image */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute w-full inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
               {/* Overlay for text legibility */}

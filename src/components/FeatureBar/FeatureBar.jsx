@@ -5,7 +5,7 @@ import Container from '../common/Container/Container';
 const FeatureBar = () => {
     return (
         <Container>
-            <div className=" my-10 bg-[#0b2c4e] text-white p-8 flex flex-wrap justify-between gap-6">
+            <div className=" my-10 bg-[#0b2c4e]  mx-5 md:mx-0 border border-yellow-800 text-white p-8 flex flex-wrap justify-between gap-6">
 
                 {/* Item 1 */}
                 <div className="flex items-center gap-4">

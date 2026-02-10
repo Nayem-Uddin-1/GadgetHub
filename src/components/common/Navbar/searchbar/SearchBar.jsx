@@ -4,9 +4,9 @@ import { HiOutlineSearch } from 'react-icons/hi';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 
-function SearchBar() {
+function SearchBar({type}) {
     return (
-        <div className='search-bar bg-white flex justify-center items-center rounded border-gray-300 '>
+        <div className={`search-bar w-full  hidden bg-white md:flex justify-center items-center rounded border-gray-300 ${type === "menu-bar" ? "flex md:hidden" : "hidden md:flex"} ` }>
             <div className="flex items-center gap-1 px-4 text-gray-600 cursor-pointer border-r border-gray-200 h-full">
                 <span className="text-sm font-normal">All</span>
                 <IoMdArrowDropdown className="text-lg" />

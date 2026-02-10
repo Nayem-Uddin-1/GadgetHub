@@ -7,10 +7,10 @@ function FeaturedProductDisplay({data}) {
     return (
         <Container>
 
-            <div className='flex gap-10 justify-center bg-[#F7F7F7] py-10 mt-20 ' >
+            <div className='flex flex-col md:flex-row gap-10 justify-center bg-[#F7F7F7] py-10 mt-20 ' >
 
 
-                <div className='w-[389px] relative  h-[420px] '>
+                <div className='w-[300px] mx-auto md:mx-0 md:w-[389px] relative h-[380px] md:h-[420px]  '>
                     <img src="https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/051c64e1f3b5167d.webp/300-300-h/catalog/journal3/assets/demos/5/v1/Blocks/block-1.jpg" alt="" className='w-full h-full rounded ' />
 
                     <div className='absolute top-10 left-10'>

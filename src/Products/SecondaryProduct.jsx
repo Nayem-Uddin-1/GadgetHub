@@ -12,7 +12,7 @@ function SecondaryProduct({ data }) {
             <div className="flex gap-5 mt-10">
                 {
                     Prods.map((item, i) => (
-                        <div className='w-[300px] h-[468px] p-2 bg-white rounded group border ' >
+                        <div className='w-[300px] h-[468px] p-2 bg-white rounded group border' >
                             <ImageArea />
                             <TextArea />
                         </div>

@@ -11,8 +11,15 @@ export const Prods = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Apple",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut-300x300.png",
-      "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-2.jpg"
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/ce582b68cfaaf896.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up.png",
+      
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png",
+
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/5358d2dfe3f0b366.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-green.png",
+
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/7ab33d677a7de135.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-silver.png",
+
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/0dae527bb6726a8a.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-space.png",
     ],
     rating: 4.8,
     reviews: [

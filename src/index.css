@@ -41,3 +41,13 @@
 .banner-slider .slick-next {
   right: 20px !important;
 }
+
+
+@media (min-width: 640px) and (max-width: 767px) {
+  
+.banner-slider .slick-prev,
+.banner-slider .slick-next {
+  
+  
+}
+}

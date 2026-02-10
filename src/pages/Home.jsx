@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/common/Navbar/Navbar'
 import Banner from '../components/banner/Banner'
 import CategoryCards from '../components/common/Navbar/searchbar/CategoryCards/CategoryCards'
 import FeatureBar from '../components/FeatureBar/FeatureBar'
@@ -10,7 +9,7 @@ import NewArrival from '../components/newarrival/NewArrival'
 function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Banner />
       <CategoryCards />
       <NewArrival />

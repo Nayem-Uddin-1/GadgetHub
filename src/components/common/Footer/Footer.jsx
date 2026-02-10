@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* Links & Newsletter Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
           {sections.map((section, idx) => (
             <div key={idx}>
               <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-wider">{section.title}</h4>
@@ -64,8 +64,8 @@ const Footer = () => {
           ))}
 
           {/* Newsletter Section */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-wider">Newsletter</h4>
+          <div className=' px-5 md:px-0  '>
+            <h4 className="text-white text-center md:text-start font-bold mb-6 uppercase text-sm tracking-wider">Newsletter</h4>
             <p className="text-sm mb-6 leading-relaxed">
               Stay up to date with news and promotions by signing up for our newsletter
             </p>

@@ -15,14 +15,14 @@ function Products({ type ,name }) {
     return (
         <>
             <div>
-                <div className="text flex justify-between mb-3">
+                <div className="text flex px-3 md:px-0 justify-between mb-3">
                     <h3>{name} </h3>
                     <Link>See All</Link>
                 </div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4' >
+                <div className='grid grid-cols-1   sm:grid-cols-2 lg:grid-cols-3 gap-4' >
                     {
                         Prods.map((item, i) => (
-                            <div className="bg-white w-[309px] p-2 flex gap-3 ">
+                            <div className="bg-white  w-[309px] mx-auto md:mx-0  p-2 flex gap-3 ">
                                 <div className='w-25 h-25 bg-gray-100  '>
                                     <img src="https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/ce582b68cfaaf896.webp/350-350/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up.png" alt="" />
                                 </div>

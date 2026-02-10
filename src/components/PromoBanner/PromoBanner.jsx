@@ -14,7 +14,7 @@ function PromoBanner() {
                 />
 
          
-            <div className=" absolute top-20 left-20 ">
+            <div className=" absolute top-5 left-5 md:top-20 md:left-20 ">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-[#0a192f] border border-blue-900 px-3 py-1 rounded-md text-sm font-medium">
                     <FaApple className="text-white" />
@@ -23,7 +23,7 @@ function PromoBanner() {
 
                 {/* Text Group */}
                 <div className="space-y-2">
-                    <h2 className="text-4xl font-bold my-5 tracking-tight">
+                    <h2 className="text-2xl md:text-4xl font-bold my-5 tracking-tight">
                         Get up to <span className="text-white">$500</span> on your trade-in laptop
                     </h2>
                     <p className="text-gray-400 text-lg">
