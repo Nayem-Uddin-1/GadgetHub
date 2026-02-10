@@ -2,12 +2,12 @@ import React from 'react'
 import { FaSearchPlus } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-function ImageArea({className}) {
+function ImageArea({ image, className}) {
     return (
         <>
 
             <div className={`h-[284px] bg-gray-100 relative ${className} `} >
-                <img src="https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/21f2a0a612c9a99c.webp/350-350/catalog/journal3/catalog/categories/electronics/audio-headphones/headphones/noise-cancelling-headphones/noise-cancelling-headphones.png" alt="" className='' />
+                <img src={image} alt="" className='w-full h-full' />
 
                 {/* Pre-order section */}
                 <div className="absolute top-0 left-0 w-24 h-24 overflow-hidden z-10">

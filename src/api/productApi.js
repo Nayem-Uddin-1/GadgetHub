@@ -11,7 +11,7 @@ export const Prods = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Apple",
     images: [
-      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/ce582b68cfaaf896.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up.png",
+      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/800-800/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png",
       
       "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png",
 
