@@ -1,14 +1,17 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/common/Navbar/Navbar'
-import Home from '../pages/Home'
+import Footer from '../components/common/Footer/Footer'
 
 function MianLayouts() {
     return (
-        <div>          
+        <div>
+
+            <Navbar />
             <main>
                 <Outlet />
             </main>
+            <Footer />
         </div>
     )
 }
