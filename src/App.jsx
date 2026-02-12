@@ -6,6 +6,7 @@ import Footer from './components/common/Footer/Footer'
 import SingleProduct from './components/singleproduct/SingleProduct'
 import Navbar from './components/common/Navbar/Navbar'
 import NotFound from './pages/NotFound'
+import ShopCart from './components/cart/ShopCart'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route element={<MianLayouts />} >
             <Route path='/' element={<Home />} />
+            <Route path='/cart' element={<ShopCart />} />
             <Route path='/product' element={<SingleProduct />} />
 
           </Route>

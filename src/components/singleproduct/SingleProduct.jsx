@@ -4,47 +4,40 @@ import Container from '../common/Container/Container'
 import ImageArea from '../../Products/SeconParts/ImageArea'
 import { Prods } from '../../api/productApi'
 import TextArea from './ProductInfo_/TextArea'
-
-import { FaStar } from "react-icons/fa";
-
-
-
-
+import TabsList from './Tabs_/TabsList'
+import TitlePage from '../../pages/TitlePage'
 
 function SingleProduct() {
 
-    console.log(Prods[0].images[0]);
-
-
-
+    const product = Prods[0]
 
     return (
-        <section className='border' >
-
+        <section className="border">
             <Breadcrumb />
+            <TitlePage title={"Pro Phone 13 Pro Demo Mock-up"} />
             <Container>
-                <h3 className='py-5 text-3xl font-bold' >Pro Phone 13 Pro Demo Mock-up </h3>
-                <div className='border-b-3 border-black w-15 '></div>
-            </Container>
 
-            <hr className='w-full' />
+                {/* ========= TOP SECTION (Image + Text) ========= */}
+                <div className="flex gap-12 mt-10">
 
-            <Container>
-                <div className='flex' >
-                    {/* Main Image... */}
-                    <div className="w-[688px] h-[688px] ">
+                    {/* LEFT SIDE - IMAGES */}
+                    <div className="w-[688px] flex-shrink-0">
 
-                        <ImageArea image={Prods[0].images[0]} className={`h-full bg-[#EBEBF0] `} />
+                        {/* Main Image */}
+                        <ImageArea
+                            image={product.images[0]}
+                            className="h-[688px] bg-[#EBEBF0]"
+                        />
 
-                        {/* Images... */}
-                        <div className="mt-3 flex gap-3 ">
-                            {Array.from({ length: 5 }).map((_, index) => (
+                        {/* Thumbnails */}
+                        <div className="mt-8 flex gap-3">
+                            {product.images.slice(0, 5).map((img, index) => (
                                 <div
                                     key={index}
-                                    className="w-25 h-25 border rounded border-gray-300"
+                                    className="w-24 h-24 border rounded border-gray-300"
                                 >
                                     <img
-                                        src="https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/800-800/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png"
+                                        src={img}
                                         alt=""
                                         className="w-full h-full object-cover"
                                     />
@@ -54,15 +47,19 @@ function SingleProduct() {
 
                     </div>
 
-                    <div>
+                    {/* RIGHT SIDE - TEXT AREA */}
+                    <div className="flex-1">
                         <TextArea />
                     </div>
 
                 </div>
 
+                {/* ========= TABS / TABLE SECTION ========= */}
+
 
             </Container>
 
+            <TabsList />
 
             <div className="h-screen"></div>
 
