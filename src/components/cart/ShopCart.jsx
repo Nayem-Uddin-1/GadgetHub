@@ -4,15 +4,19 @@ import Container from '../common/Container/Container'
 import { Link } from 'react-router-dom'
 import { FiRefreshCw, FiTrash2 } from "react-icons/fi";
 import CartBttom from './cartscomponents/CartBttom';
+import FeatureBar from '../FeatureBar/FeatureBar';
 
 
 function ShopCart() {
     return (
         <section>
+            
             <TitlePage title={"Shopping Cart"} />
             <Container>  
-                <div className="flex justify-between">
-                    <div className="my-10 max-w-253.25 ">
+
+                {/* cart top */}
+                <div className=" lg:flex lg:gap-10 justify-between">
+                    <div className="my-10 md:max-w-253.25 max-w-200 ">
                     <table className=''>
                         <thead>
                             <tr>
@@ -36,14 +40,14 @@ function ShopCart() {
                                     />
                                 </td>
 
-                                <td className="p-4 border text-blue-600 underline cursor-pointer">
+                                <td className="p-4 md:w-100 border  underline cursor-pointer">
 
-                                    <Link to={"#"} className='' >
+                                    <Link to={"#"} className=' border-black text-blue-600 ' >
                                         Pro Phone 11 Demo Mock-up
                                     </Link>
 
                                 </td>
-                                <td className='border'>
+                                <td className='border text-center'>
                                     model-7349
                                 </td>
 
@@ -98,9 +102,14 @@ function ShopCart() {
 
                     </table>
                 </div>
+
+                {/* cart bottom */}
                 <CartBttom/>
                 </div>
             </Container>
+               <div className='bg-[#0b2c4e] ' >
+                 <FeatureBar type = "cart-featurebar" />
+               </div>
         </section>
     )
 }

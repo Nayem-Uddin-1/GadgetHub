@@ -1,34 +1,13 @@
-Home page --ok
-
-Shop / Products listing page 
-
-Product details page --
-
-Category page
-
-Search results page
-
-Cart page 
-
-Checkout page 
-
-Login page
-
-Register / Sign-up page
-
-User dashboard / My account
-
-Wishlist page
-
-Payment success / failure page 
- 
-----------------------------------------
-About us page
-
-Contact us page
-
-FAQ page
-
-Terms & conditions page
-
-Privacy policy page
+Home Page
+Product Listing (Shop) Page
+Single Product Page
+Cart Page
+Wishlist Page
+Checkout Page
+Login Page
+Register Page
+User Dashboard Page
+Order History Page
+Search Results Page
+Category Page
+404 Not Found Page

@@ -24,9 +24,9 @@ function TopBar() {
       <Container>
         <div className='flex items-center justify-between py-5'>
 
-           <div className=' md:hidden text-white flex justify-center items-center' >
-            <CgMenuLeftAlt  />
-           </div>
+          <div className=' md:hidden text-white flex justify-center items-center' >
+            <CgMenuLeftAlt />
+          </div>
 
           <Link to={"/"} className='logoFont text-white sm:text-xl md:text-5xl ' >
             Gadget<span className='text-red-500' >.</span>Hub
@@ -57,23 +57,27 @@ function TopBar() {
               <GroupButton icon={<RiBloggerLine />} text="Blog" />
             </div>
 
-             <div className="flex  md:hidden  items-center gap-6 p-4 w-fit">
-              <FiUser size={24} className="text-white cursor-pointer" />
-              <LuHeart size={24} className="text-white cursor-pointer" />
-              <LuShoppingBag size={24} className="text-white cursor-pointer" />
+            <div className="flex  md:hidden  items-center gap-6 p-4 w-fit">
+              <Link>
+                <FiUser size={24} className="text-white cursor-pointer" />
+              </Link>
+              <Link>
+                <LuHeart size={24} className="text-white cursor-pointer" />
+              </Link>
+              <Link to={"/cart"} ><LuShoppingBag size={24} className="text-white cursor-pointer" /></Link>
             </div>
 
 
           </div>
-            
 
-          
-           
+
+
+
 
 
 
         </div>
-             <SearchBar type="menu-bar" />
+        <SearchBar type="menu-bar" />
       </Container>
     </section>
   )

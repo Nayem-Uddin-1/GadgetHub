@@ -11,26 +11,26 @@ function CartBttom() {
 
     return (
         <>
-            <div className="w-122.5 border rounded border-gray-300 p-10 ">
+            <div className=" md:[720px] lg:w-122.5 border rounded border-gray-300 p-10 ">
                 <h2 className='title text-xl mb-10 font-semibold '>What would you like to do next?</h2>
 
-                <div className="panel-heading ">
-                    <h4  onClick={() => setIsCouponOpen(!isCouponOpen)} className={`panel-title flex transform transisition justify-between ${isCouponOpen ? "text-blue-500 ": "hover:text-blue-500 "} `}>
-                       <Link>
-                        Use Coupon Code
-                        </Link>
-                        <span   >
-                            <IoIosArrowDown
-                               
-                                className={` transition-transform duration-300 ${isCouponOpen ? "rotate-180" : ""}  `} />
+                <div>
+                    <div className="panel-heading ">
+                        <h4 onClick={() => setIsCouponOpen(!isCouponOpen)} className={`panel-title flex transform transisition justify-between ${isCouponOpen ? "text-blue-500 " : "hover:text-blue-500 "} `}>
+                            <Link>
+                                Use Coupon Code
+                            </Link>
+                            <span   >
+                                <IoIosArrowDown
 
-                        </span>
-                    </h4>
+                                    className={` transition-transform duration-300 ${isCouponOpen ? "rotate-180" : ""}  `} />
+
+                            </span>
+                        </h4>
+                    </div>
+                    <CouponComponent isCouponOpen={isCouponOpen} />
                 </div>
-                
-                <CouponComponent isCouponOpen={isCouponOpen} />
-
-                <ShippingTax/>
+                <ShippingTax />
             </div>
 
         </>

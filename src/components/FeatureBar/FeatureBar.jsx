@@ -2,11 +2,12 @@ import React from 'react';
 import { FaTruck, FaLock, FaUndo, FaHeadphones } from 'react-icons/fa';
 import Container from '../common/Container/Container';
 
-const FeatureBar = () => {
+const FeatureBar = ({type}) => {
     return (
         <Container>
-            <div className=" my-10 bg-[#0b2c4e]  mx-5 md:mx-0 border border-yellow-800 text-white p-8 flex flex-wrap justify-between gap-6">
-
+            <div className={` my-10 bg-[#0b2c4e]  mx-5 md:mx-0 text-white p-8  grid sm:grid-2 md:grid-cols-4 justify-items-center items-center
+             gap-6`}>
+  
                 {/* Item 1 */}
                 <div className="flex items-center gap-4">
                     <FaTruck size={30} />

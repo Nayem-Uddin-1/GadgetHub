@@ -4,6 +4,7 @@ import Container from '../Container/Container';
 import { FaRegHeart } from "react-icons/fa";
 import { FaCodeCompare } from "react-icons/fa6";
 import { LiaOpencart } from "react-icons/lia";
+import { Link } from 'react-router-dom';
 
 
 
@@ -22,20 +23,20 @@ function MainNav() {
 
           <div className="flex gap-5 ">
 
-            <button className='text-white flex gap-2 items-center justify-center'>
+            <Link to={"/Wishlist "} className='text-white flex gap-2 items-center justify-center'>
               <FaRegHeart />
               Wishlist
-            </button>
-            <button className='text-white  flex gap-2 items-center justify-center'>
+            </Link>
+            <Link to={"/compare"} className='text-white  flex gap-2 items-center justify-center'>
               <FaCodeCompare />
               Compare
-            </button>
+            </Link>
 
-            <button className='bg-[#FED243] p-3 rounded flex items-center justify-center gap-2 ' >
+            <Link to={"/cart"} className='bg-[#FED243] p-3 rounded flex items-center justify-center gap-2 ' >
               0 item(s) - $0.00
               <LiaOpencart />
 
-            </button>
+            </Link>
 
 
           </div>
