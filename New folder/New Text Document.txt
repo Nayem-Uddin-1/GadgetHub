@@ -1,11 +1,11 @@
-Home Page
-Product Listing (Shop) Page
+Home Page---
+Product Listing (Shop) Page ---
 Single Product Page
-Cart Page
+Cart Page ---
 Wishlist Page
 Checkout Page
-Login Page
-Register Page
+Login Page ---
+Register Page ---
 User Dashboard Page
 Order History Page
 Search Results Page

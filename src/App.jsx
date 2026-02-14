@@ -7,6 +7,7 @@ import SingleProduct from './components/singleproduct/SingleProduct'
 import NotFound from './pages/NotFound'
 import ShopCart from './components/cart/ShopCart'
 import Signin from './pages/Signin'
+import WishList from './pages/WishList'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route element={<MianLayouts />} >
             <Route path='/' element={<Home />} />
             <Route path='/cart' element={<ShopCart />} />
+            <Route path='/wish-list' element={<WishList/> } />
             <Route path='/product' element={<SingleProduct />} />
 
           </Route>
