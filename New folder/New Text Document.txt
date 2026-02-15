@@ -1,13 +1,27 @@
-Home Page---
-Product Listing (Shop) Page ---
-Single Product Page
-Cart Page ---
-Wishlist Page
-Checkout Page
-Login Page ---
-Register Page ---
-User Dashboard Page
-Order History Page
-Search Results Page
-Category Page
-404 Not Found Page
+
+Login page-------------
+
+Register / Sign-up page----------
+
+Home page --------------------------
+
+Shop / Products listing page ----------------------
+
+Product details page ---------------
+
+Category page
+
+Search results page
+
+Cart page -------------------------
+
+Checkout page 
+
+User dashboard / My account
+
+Wishlist page-----
+
+Payment success / failure page 
+
+Terms & conditions page
+

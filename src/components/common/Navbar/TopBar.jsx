@@ -12,6 +12,7 @@ import Container from '../Container/Container'
 import SearchBar from './searchbar/SearchBar'
 import { BiDollar } from "react-icons/bi";
 import GroupButton from './buttonGroup/GroupButton';
+import { useSelector } from 'react-redux';
 
 
 
@@ -19,6 +20,13 @@ import GroupButton from './buttonGroup/GroupButton';
 
 
 function TopBar() {
+
+  const user = useSelector((state) => state.user.users);
+  const firstLetter = user?.name?.charAt(0).toUpperCase();
+
+
+
+  console.log(user);
   return (
     <section className='bg-[#092A53] text-[36px] '>
       <Container>
@@ -52,7 +60,11 @@ function TopBar() {
 
             {/* buttons */}
             <div className='hidden md:flex gap-3'>
-              <GroupButton icon={<FaRegUser />} text="Account" />
+              {user ?
+                 <GroupButton alpha={firstLetter} type="later" />
+                :
+                <GroupButton icon={<FaRegUser />} text="Account" />}
+
               <GroupButton icon={<CgMail />} text="Contact" />
               <GroupButton icon={<RiBloggerLine />} text="Blog" />
             </div>

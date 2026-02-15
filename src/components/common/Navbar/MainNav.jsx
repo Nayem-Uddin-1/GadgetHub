@@ -5,12 +5,16 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaCodeCompare } from "react-icons/fa6";
 import { LiaOpencart } from "react-icons/lia";
 import { Link } from 'react-router-dom';
-
+ 
 
 
 
 
 function MainNav() {
+
+   
+    
+
   return (
     <section className='bg-[#092A53] py-2'>
       <Container>

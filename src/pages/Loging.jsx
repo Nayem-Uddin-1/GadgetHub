@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Breadcrumb from '../components/singleproduct/Breadcrumb'
 import TitlePage from './TitlePage'
 import Container from '../components/common/Container/Container'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { RiArrowRightSLine } from 'react-icons/ri';
+import { useSelector } from 'react-redux'
 
 function Loging() {
+
+
+    const navigate = useNavigate()
+
+    // const user = useSelector((state) => state.user.users)
+
+    const user = useSelector((state => state.user.users))
+
+
+    console.log("User", user);
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        if (user.email === email && user.password === password) {
+            navigate("/")
+        }
+        else {
+            console.log("Error , fill input again");
+        }        
+
+    };
+
+
+
     return (
         <section>
 
@@ -27,13 +59,14 @@ function Loging() {
                             {/* E-Mail Input Group */}
                             <div className="grid grid-cols-1 group md:grid-cols-3 items-center">
                                 <label className="text-gray-600 text-sm mb-1 md:mb-0">
-                                    E-Mail Address
+                                    E-Mail
                                 </label>
                                 <div className="md:col-span-2">
                                     <input
-                                        type="text"
+                                        type="email"
                                         placeholder="E-Mail Address"
                                         className="w-full px-3 py-2 border border-[#ddd] rounded-sm text-sm focus:outline-none focus:border-blue-400 placeholder-[#999] group-hover:border-blue-400"
+                                        onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -48,6 +81,7 @@ function Loging() {
                                         type="password"
                                         placeholder="Password"
                                         className="w-full px-3 py-2 border border-[#ddd] rounded-sm text-sm focus:outline-none focus:border-blue-400 placeholder-[#999] group-hover:border-blue-400"
+                                        onChange={(e) => setPassword(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -65,7 +99,7 @@ function Loging() {
 
                             {/* Login Button */}
                             <div className="">
-                                <button className="w-full cursor-pointer bg-[#1c1f23] text-white py-3 px-4 rounded-sm flex items-center justify-center font-bold text-sm tracking-wide hover:bg-[#0C3D78] transition-colors uppercase">
+                                <button onClick={handleLogin} className="w-full cursor-pointer bg-[#1c1f23] text-white py-3 px-4 rounded-sm flex items-center justify-center font-bold text-sm tracking-wide hover:bg-[#0C3D78] transition-colors uppercase">
                                     Login
 
                                 </button>
