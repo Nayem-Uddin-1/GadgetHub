@@ -7,13 +7,12 @@ export const Prods = [
     price: 1200,
     discount: 10,
     finalPrice: 1080,
-    stock: 50,
+    isNew: true,
+    stock: 0,
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Apple",
     images: [
       "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/800-800/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png",
-      
-      "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/d673fc908c980942.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-gold.png",
 
       "https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/5358d2dfe3f0b366.webp/100-100/catalog/journal3/catalog/categories/electronics/mobile/phones/pro-phone-13-pro-demo-mock-up/pro-phone-13-pro-demo-mock-up-variant-color-green.png",
 
@@ -42,7 +41,7 @@ export const Prods = [
     discount: 15,
     finalPrice: 935,
     stock: 30,
-    categories: ["Electronics", "Mobile Phones", "Smartphones"],
+    categories: ["Electronics", "Flat Screen TVs", "Smartphones"],
     brand: "Samsung",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut3-300x300.png",
@@ -69,7 +68,7 @@ export const Prods = [
     discount: 5,
     finalPrice: 142.5,
     stock: 120,
-    categories: [ "Electronics"],
+    categories: ["Electronics"],
     brand: "Nike",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut6-300x300.png",

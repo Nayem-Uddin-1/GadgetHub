@@ -4,7 +4,12 @@ import { FiArrowRight } from 'react-icons/fi';
 import { cardsdata } from './cardData'
 
 
+
+
 function CategoryCards() {
+
+
+
   return (  
     <Container>
       <div className="bg-gray-100 mt-10 px-5 md:px-0  ">

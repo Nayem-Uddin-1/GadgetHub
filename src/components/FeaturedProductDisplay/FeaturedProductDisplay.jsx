@@ -2,19 +2,23 @@ import React from 'react'
 import Container from '../common/Container/Container'
 import Products from '../../Products/Products'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
-function FeaturedProductDisplay({data}) {
+function FeaturedProductDisplay({products,data}) {
+
+   
+
     return (
         <Container>
 
             <div className='flex flex-col md:flex-row gap-10 justify-center bg-[#F7F7F7] py-10 mt-20 ' >
 
 
-                <div className='w-[300px] mx-auto md:mx-0 md:w-[389px] relative h-[380px] md:h-[420px]  '>
+                <div className='w-75 mx-auto md:mx-0 md:w-97.25 relative h-95 md:h-105  '>
                     <img src="https://www.journal-theme.com/5/catalog/view/theme/journal3/image.php/051c64e1f3b5167d.webp/300-300-h/catalog/journal3/assets/demos/5/v1/Blocks/block-1.jpg" alt="" className='w-full h-full rounded ' />
 
                     <div className='absolute top-10 left-10'>
-                        <p className='bg-[#FFEBEB] w-[130px] text-center rounded p-1 mb-2 ' >Up to 70% Off</p>
+                        <p className='bg-[#FFEBEB] w-32.5 text-center rounded p-1 mb-2 ' >Up to 70% Off</p>
                         <h3 className='text-[25px] text-white font-bold mb-2' >Shop Mobile</h3>
                         <div className="flex items-start">
                             <span className="font-bold text-gray-200 mt-1 mr-2">From</span>
@@ -32,16 +36,7 @@ function FeaturedProductDisplay({data}) {
 
 
                 </div>
-
-
-               <Products name={data} />
-
-
-
-
-
-
-
+               <Products name={data} products={products} />
 
             </div>
 

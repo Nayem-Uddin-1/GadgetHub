@@ -6,16 +6,37 @@ import { Prods } from '../../api/productApi'
 import TextArea from './ProductInfo_/TextArea'
 import TabsList from './Tabs_/TabsList'
 import TitlePage from '../../pages/TitlePage'
+import { useSelector } from 'react-redux'
+import { useParams } from "react-router-dom";
 
 function SingleProduct() {
 
     const product = Prods[0]
 
+    const { slug } = useParams();
+    const products = useSelector((state => state.product.products))
+
+    const singleProduct = products.find(
+        product => product.slug === slug
+    );
+
+    console.log("single pro", );
+
+
+
+    // if (!singleProduct) {
+    //     return <h2>Product not found</h2>;
+    // }
+
+
+
     return (
         <section className="border">
-            <Breadcrumb />
-            <TitlePage title={"Pro Phone 13 Pro Demo Mock-up"} />
+            <Breadcrumb singleProduct={singleProduct} />
+            <TitlePage title={singleProduct.name} />
             <Container>
+
+                {/* <h1>name {singleProduct.name} </h1> */}
 
                 {/* ========= TOP SECTION (Image + Text) ========= */}
                 <div className="flex gap-12 mt-10">
@@ -25,31 +46,19 @@ function SingleProduct() {
 
                         {/* Main Image */}
                         <ImageArea
-                            image={product.images[0]}
+                            item={product}
                             className="h-[688px] bg-[#EBEBF0]"
+                            singleProduct={singleProduct}
                         />
 
-                        {/* Thumbnails */}
-                        <div className="mt-8 flex gap-3">
-                            {product.images.slice(0, 5).map((img, index) => (
-                                <div
-                                    key={index}
-                                    className="w-24 h-24 border rounded border-gray-300"
-                                >
-                                    <img
-                                        src={img}
-                                        alt=""
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        {/* Images */}
+                   
 
                     </div>
 
                     {/* RIGHT SIDE - TEXT AREA */}
                     <div className="flex-1">
-                        <TextArea />
+                        <TextArea singleProduct={singleProduct} />
                     </div>
 
                 </div>

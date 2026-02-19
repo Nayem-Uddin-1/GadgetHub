@@ -10,14 +10,14 @@ import StepperGroup from './StepperGroup';
 
 
 
-function TextArea() {
+function TextArea({ singleProduct }) {
 
 
 
 
     return (
-        <div className=' p-10 bg-white w-[451px]'>
-            <div className='flex gap-3  items-center '>
+        <div className=' p-10 bg-white w-[451px] '>
+            <div className='flex gap-3  items-center mb-5 '>
 
                 <div className="flex gap-1  ">
                     <FaStar className=' text-yellow-600' />
@@ -27,13 +27,13 @@ function TextArea() {
                     <FaStar className=' text-yellow-600' />
                 </div>
 
-                <a href="#" className='border-b border-dotted' >0 reviews</a>
+                <a href="#" className='border-b border-dotted' >{singleProduct.rating} reviews</a>
 
-                <a href="#" className='border-b border-dotted  ' >Write a review</a>
+                <a href="#" className=' border-b border-dotted text-blue-500  ' >Write a review</a>
 
             </div>
 
-            <div>
+            <div className='text-gray-400' >
                 <span className='border rounded p-0.5'><a href="#">Custom Label (new position)</a></span>
                 <span className='border rounded p-0.5' > <a href="#" className='border-b border-dotted hover:bg-blue-400' >
                     Another level
@@ -41,33 +41,38 @@ function TextArea() {
 
             </div>
 
-            <div>
-                <div >
+            <div className='text-gray-400' >
+                <div className='mb-2 mt-10' >
                     <span>
                         from
                     </span>
                 </div>
 
-                <div className='product-price'>
-                    $730.22
+                <div className='product-price text-black text-2xl font-semibold mb-1 '>
+                    ${singleProduct.price}
                 </div>
 
-                <div className="produt-text">
-                    Ex Tax: $730.22
+                <div className="produt-text text-black mb-1">
+                    Ex Tax: ${singleProduct.price}
                 </div>
 
-                <div className="product-point">
+                <div className="product-point mb-5">
                     Price in reward points: 49
                 </div>
 
             </div>
 
             {/* product stats */}
-            <div className="product-stats">
+            <div className="product-stats text-gray-500 mb-5">
                 <ul className='list-disc list-inside' >
                     <li>
-                        <b>Stock:</b>
-                        <span>In Stock</span>
+                        <b>Stock : </b>
+                        {
+                            singleProduct.stock > 0 ?
+                                <span className={`${ singleProduct.stock > 0 ? "text-green-500 font-bold" : " "}`} >In Stock</span> :
+                                 <span  className={`${ singleProduct.stock === 0 ? "text-red-500 font-bold" : " "}`}>Out of Stock</span> 
+                        }
+                      
                     </li>
                     <li>
                         <b>Brand:</b>

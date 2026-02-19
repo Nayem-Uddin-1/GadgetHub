@@ -22,7 +22,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/cart' element={<ShopCart />} />
             <Route path='/wish-list' element={<WishList/> } />
-            <Route path='/product' element={<SingleProduct />} />
+            <Route path='/product/:slug' element={<SingleProduct />} />
 
           </Route>
             <Route path='*' element={<NotFound/>} />

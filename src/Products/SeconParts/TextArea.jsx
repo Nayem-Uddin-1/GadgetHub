@@ -9,17 +9,17 @@ import { BiCartAdd } from "react-icons/bi";
 
 
 
-function TextArea() {
+function TextArea({item}) {
 
     const [val, setVal] = useState(1);
-
+ 
     return (
         <>
 
             <div className='p-2 flex justify-center gap-2 flex-col '>
-                <h3 className='  ' >category</h3>
-                <Link className=' hover:text-blue-500 hover:underline ' >title</Link>
-                <h3 className='text-gray-800 font-semibold ' >$555.6</h3>
+                <h3 className='  ' >{item.categories[1]} </h3>
+                <Link className=' hover:text-blue-500 hover:underline ' >{item.name}</Link>
+                <h3 className='text-gray-800 font-semibold ' >$ {item.price} </h3>
 
             </div>
 

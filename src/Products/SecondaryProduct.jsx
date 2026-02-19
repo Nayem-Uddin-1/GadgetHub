@@ -5,16 +5,16 @@ import TextArea from './SeconParts/TextArea';
 import ImageArea from './SeconParts/ImageArea';
 
 
-function SecondaryProduct({ data }) {
+function SecondaryProduct({ products }) { 
 
     return (
         <Container>
             <div className="flex gap-5 mt-10">
                 {
-                    Prods.map((item, i) => (
-                        <div className='w-[300px] h-[468px] p-2 bg-white rounded group border' >
-                            <ImageArea />
-                            <TextArea />
+                    products.map((item, i) => (
+                        <div className='w-[300px] h-[468px] p-2 bg-white rounded group' >
+                            <ImageArea item={item}  />
+                            <TextArea item={item} />
                         </div>
                     ))
 
