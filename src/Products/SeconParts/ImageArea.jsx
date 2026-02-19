@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ImageArea({ singleProduct, className }) {
 
 
-    console.log("imagearea", singleProduct);
+ 
 
     const [mainImage, setMainImage] = useState(singleProduct?.images[0])
 

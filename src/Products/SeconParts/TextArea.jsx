@@ -50,7 +50,7 @@ function TextArea({item}) {
                     </div>
 
                     <div className='flex gap-4 items-center'>
-                        <Link className='text-gray-500 flex items-center gap-1 '  > <BiCartAdd /> Add to cart </Link>
+                        <Link className='text-gray-500 flex items-center gap-1 ' > <BiCartAdd /> Add to cart </Link>
                         <Link className='text-gray-500 ' > <FaRegHeart /></Link>
                         <Link className='text-gray-500 ' > <FaCodeCompare /></Link>
                     </div>

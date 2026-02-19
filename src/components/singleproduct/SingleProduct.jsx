@@ -20,13 +20,15 @@ function SingleProduct() {
         product => product.slug === slug
     );
 
-    console.log("single pro", );
+    
 
 
 
-    // if (!singleProduct) {
-    //     return <h2>Product not found</h2>;
-    // }
+    if (!singleProduct) {
+        return <Container>
+            <h2>Product not found</h2>
+        </Container>;
+    }
 
 
 
@@ -35,8 +37,6 @@ function SingleProduct() {
             <Breadcrumb singleProduct={singleProduct} />
             <TitlePage title={singleProduct.name} />
             <Container>
-
-                {/* <h1>name {singleProduct.name} </h1> */}
 
                 {/* ========= TOP SECTION (Image + Text) ========= */}
                 <div className="flex gap-12 mt-10">
@@ -48,11 +48,12 @@ function SingleProduct() {
                         <ImageArea
                             item={product}
                             className="h-[688px] bg-[#EBEBF0]"
+
                             singleProduct={singleProduct}
                         />
 
                         {/* Images */}
-                   
+
 
                     </div>
 

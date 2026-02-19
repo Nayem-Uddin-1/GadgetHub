@@ -1,12 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BiCartAdd } from "react-icons/bi";
 import { BiCartDownload } from "react-icons/bi";
 
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../Redux/cartSlice';
 
-function StepperGroup() {
+function StepperGroup({ singleProduct }) {
+
+    const dispatch =useDispatch()
+    const navigate = useNavigate()
+
+ 
+
+    const handleAddToCart = () => {
+        dispatch(addToCart(singleProduct));
+        console.log("add to cart");                
+        navigate("/cart")
+    };
+
+
     return (
         <>  {/* stepper group  */}
             <div className="stepper-group flex gap-5">
@@ -19,12 +34,12 @@ function StepperGroup() {
                 </div>
 
                 {/* add to cart button  */}
-                <Link className='btton-cart flex bg-black text-white rounded items-center gap-1 justify-center border w-[154px] p-1' >
+                <button onClick={handleAddToCart} className='btton-cart flex cursor-pointer bg-black text-white rounded items-center gap-1 justify-center border w-[154px] p-1' >
                     <div className='font-bold'>
                         <BiCartAdd />
                     </div>
                     <span className='font-semibold' >Add to cart</span>
-                </Link>
+                </button>
 
                 {/* buy cart */}
                 <div className="buy-cart flex gap-1 items-center w-[106px] border p-1 rounded justify-center">

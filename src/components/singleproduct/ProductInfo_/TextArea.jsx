@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa";
-
 import SocialIcons from './SocialIcons';
 import ProductExtraText from './ProductExtraText';
 import StepperGroup from './StepperGroup';
@@ -69,10 +68,10 @@ function TextArea({ singleProduct }) {
                         <b>Stock : </b>
                         {
                             singleProduct.stock > 0 ?
-                                <span className={`${ singleProduct.stock > 0 ? "text-green-500 font-bold" : " "}`} >In Stock</span> :
-                                 <span  className={`${ singleProduct.stock === 0 ? "text-red-500 font-bold" : " "}`}>Out of Stock</span> 
+                                <span className={`${singleProduct.stock > 0 ? "text-green-500 font-bold" : " "}`} >In Stock</span> :
+                                <span className={`${singleProduct.stock === 0 ? "text-red-500 font-bold" : " "}`}>Out of Stock</span>
                         }
-                      
+
                     </li>
                     <li>
                         <b>Brand:</b>
@@ -88,7 +87,8 @@ function TextArea({ singleProduct }) {
 
 
 
-            <StepperGroup />
+            {singleProduct.stock > 0 && <StepperGroup singleProduct={singleProduct} />}
+
             <ProductExtraText />
             <SocialIcons />
 
