@@ -17,7 +17,7 @@ function StepperGroup({ singleProduct }) {
 
     const handleAddToCart = () => {
         dispatch(addToCart(singleProduct));
-        console.log("add to cart");                
+        console.log("add to carts");                
         navigate("/cart")
     };
 
@@ -34,7 +34,7 @@ function StepperGroup({ singleProduct }) {
                 </div>
 
                 {/* add to cart button  */}
-                <button onClick={handleAddToCart} className='btton-cart flex cursor-pointer bg-black text-white rounded items-center gap-1 justify-center border w-[154px] p-1' >
+                <button onClick={handleAddToCart} className='btton-cart flex cursor-pointer bg-black text-white rounded items-center gap-1 justify-center border w-38.5 p-1' >
                     <div className='font-bold'>
                         <BiCartAdd />
                     </div>
@@ -42,10 +42,10 @@ function StepperGroup({ singleProduct }) {
                 </button>
 
                 {/* buy cart */}
-                <div className="buy-cart flex gap-1 items-center w-[106px] border p-1 rounded justify-center">
+                <div className="buy-cart flex gap-1 items-center w-26.5 border p-1 rounded justify-center">
                     <Link>
                         <BiCartDownload />
-                    </Link>
+                    </Link> 
                     <span className='font-semibold ' >Buy Now</span>
                 </div>
 
