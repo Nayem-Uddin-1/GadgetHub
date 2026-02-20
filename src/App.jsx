@@ -6,8 +6,8 @@ import Home from './pages/Home'
 import SingleProduct from './components/singleproduct/SingleProduct'
 import NotFound from './pages/NotFound'
 import ShopCart from './components/cart/ShopCart'
-import Signin from './pages/Signin'
 import WishList from './pages/WishList'
+import SignIn from './components/singleproduct/ProductInfo_/SignIn'
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
         {/* <Navbar/> */}
         <Routes>
             <Route path='/login' element={<Loging />} />
-            <Route path='/register' element={<Signin/>} />
+            <Route path='/register' element={<SignIn/>} />
           <Route element={<MianLayouts />} >
             <Route path='/' element={<Home />} />
             <Route path='/cart' element={<ShopCart />} />

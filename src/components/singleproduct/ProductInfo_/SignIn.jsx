@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { HiUser, HiMail, HiPhone, HiLockClosed } from 'react-icons/hi';
-import { Link, useNavigate } from 'react-router-dom';
-import Container from '../components/common/Container/Container';
-import TitlePage from './TitlePage';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../Redux/userSlice';
+import { Link, useNavigate } from 'react-router-dom';
+import Container from '../../common/Container/Container';
+import TitlePage from '../../../pages/TitlePage';
+import { setUser } from '../../../Redux/userSlice';
+ 
 
 
 
