@@ -4,12 +4,10 @@ import { BiCartAdd } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
- 
 
 
 
-function Products({ type, name, products }) {
-    
+function Products({ type, name, products }) {    
    
 
     return (

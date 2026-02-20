@@ -5,9 +5,16 @@ import { Link } from 'react-router-dom'
 import { FiRefreshCw, FiTrash2 } from "react-icons/fi";
 import CartBttom from './cartscomponents/CartBttom';
 import FeatureBar from '../FeatureBar/FeatureBar';
+import { useSelector } from 'react-redux';
 
 
 function ShopCart() {
+
+    const carts = useSelector((state=>state.cart.cartItems))
+
+    console.log("carts",carts);
+    
+
     return (
         <section>
             

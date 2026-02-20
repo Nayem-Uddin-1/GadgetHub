@@ -25,8 +25,6 @@ function TopBar() {
   const firstLetter = user?.name?.charAt(0).toUpperCase();
 
 
-
-  console.log(user);
   return (
     <section className='bg-[#092A53] text-[36px] '>
       <Container>
