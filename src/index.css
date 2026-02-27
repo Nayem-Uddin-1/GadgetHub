@@ -18,28 +18,41 @@
 
 .banner-slider .slick-prev,
 .banner-slider .slick-next {
-  top: auto;
-  bottom: 15px;
+ 
 
   width: 50px !important;
   height: 50px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  background: black !important;
-  border-radius: 9999px !important;
+  
   z-index: 10 !important;
 }
 
 .banner-slider .slick-prev {
-  left: auto !important;
-  right: 80px !important;
+  left: 10px !important;  
 }
 
 .banner-slider .slick-next {
-  right: 20px !important;
+  right: 10px !important;
+}
+
+/* ========================= */
+
+.product-slider .slick-prev,
+.product-slider .slick-next {
+ 
+
+  width: 50px !important;
+  height: 50px !important;
+  background-color: black;
+  z-index: 10 !important;
+}
+
+
+.product-slider .slick-prev {
+  left: 10px !important;  
+}
+
+.product-slider .slick-next {
+  right: 10px !important;
 }
 
 

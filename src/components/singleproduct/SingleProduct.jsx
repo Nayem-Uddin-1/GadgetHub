@@ -71,7 +71,7 @@ function SingleProduct() {
 
             <TabsList />
 
-            <div className="h-screen"></div>
+            
 
         </section>
     )

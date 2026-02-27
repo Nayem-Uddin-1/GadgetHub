@@ -61,7 +61,7 @@ function TopBar() {
               {user ?
                  <GroupButton alpha={firstLetter} type="later" />
                 :
-                <GroupButton icon={<FaRegUser />} text="Account" />}
+                <Link to={"/login"} ><GroupButton icon={<FaRegUser />} text="Account" /></Link> }
 
               <GroupButton icon={<CgMail />} text="Contact" />
               <GroupButton icon={<RiBloggerLine />} text="Blog" />

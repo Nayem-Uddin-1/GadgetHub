@@ -17,8 +17,8 @@ function TextArea({item}) {
         <>
 
             <div className='p-2 flex justify-center gap-2 flex-col '>
-                <h3 className='  ' >{item.categories[1]} </h3>
-                <Link className=' hover:text-blue-500 hover:underline ' >{item.name}</Link>
+                <h3 className='  ' >{item.categories[1] || "NaN"}   </h3>
+                <Link className=' block max-w-45 overflow-hidden text-ellipsis whitespace-nowrap hover:border-b hover:border-dotted hover:text-blue-500 ' >{item.name}</Link>
                 <h3 className='text-gray-800 font-semibold ' >$ {item.price} </h3>
 
             </div>

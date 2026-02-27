@@ -39,7 +39,7 @@ const SignIn = () => {
 
     console.log("user", userInfo);
 
-    // navigate("/login");
+    navigate("/login");
 
   }
 

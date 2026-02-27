@@ -5,27 +5,43 @@ import { IoIosArrowForward } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
-
-
+import { useSelector } from 'react-redux';
+import RightCard from './RightCard';
 
 function Banner() {
 
-    const [disModal, setDisModal] = useState(false)
-
+    const [activeCategory, setActiveCategory] = useState(null);
     const subCategoryRef = useRef(null);
+
+    const products = useSelector((state) => state.product.products);
+
+    // ===============================
+    // Create Category Structure
+    // ===============================
+    const categoryMap = {};
+
+    products?.forEach((product) => {
+        const [main, sub] = product.categories;
+
+        if (!categoryMap[main]) {
+            categoryMap[main] = [];
+        }
+
+        if (sub && !categoryMap[main].includes(sub)) {
+            categoryMap[main].push(sub);
+        }
+    });
+
+    const mainCategories = Object.keys(categoryMap);
 
 
     useEffect(() => {
 
         const handleClickOutside = (e) => {
             if (subCategoryRef.current && !subCategoryRef.current.contains(e.target)) {
-                setDisModal(false)
+                setActiveCategory(null);
             }
-
-        }
-
+        };
 
         document.addEventListener("mousedown", handleClickOutside);
 
@@ -37,13 +53,13 @@ function Banner() {
 
 
     const settings = {
-        infinite: true,       // infinite loop
-        speed: 500,           // transition speed
-        slidesToShow: 1,      // how many slides to show at once
-        slidesToScroll: 1,    // how many slides to scroll per swipe
-        autoplay: true,       // automatic sliding
-        autoplaySpeed: 2000,  // autoplay interval in ms
-        arrows: true,         // show next/prev arrows
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: true,
     };
 
     const items = [
@@ -66,69 +82,76 @@ function Banner() {
 
     return (
         <Container>
-            <div className="md:flex gap-3 mt-10 ">
+            <div className="md:flex gap-3 md:h-132.25 mt-10">
 
 
-                <div className='w-[20%] hidden md:block h-122.25 rounded bg-white relative ' >
+                <div className='w-[20%] hidden md:block md:h-full rounded bg-white relative'>
 
-                    {/* main category list */}
-                    <ul onMouseEnter={() => setDisModal(true)} className='flex gap-2 items-center border-b-2 p-5 cursor-pointer border-gray-300 ' >
+                    {mainCategories.map((mainCat, index) => (
+                        <ul
+                            key={index}
+                            onMouseEnter={() => setActiveCategory(mainCat)}
+                            className='flex gap-2 items-center border-b-2 p-5 cursor-pointer border-gray-300'
+                        >
+                            <PiDeviceMobileSpeakerLight className='text-[40px]' />
 
-                        <PiDeviceMobileSpeakerLight className='text-[40px]' />
-                        <li className='flex justify-between items-center w-full cursor-pointer group ' >
-                            <span className='group-hover:border-b group-hover:border-dotted'>Mobile</span>
-                            <IoIosArrowForward className='text-gray-400 group-hover:text-black ' />
-                        </li>
-                    </ul>
-
-                    {/* subcategory list */}
-                    {
-                        disModal &&
-                        <div ref={subCategoryRef} className='z-1000'  >
-                            <ul
-                                className='w-50 card-ul bg-white shadow-2xs rounded absolute -right-50 top-0 z-100 '>
-
-                                <li className='flex justify-between hover:bg-gray-200 items-center w-full cursor-pointer group p-5 ' >
-                                    <span className='group-hover:border-b group-hover:border-dotted'>Phones</span>
-                                    <IoIosArrowForward className='text-gray-400  group-hover:text-black ' />
-                                </li>
-                                <li className='flex justify-between hover:bg-gray-200 items-center w-full cursor-pointer group p-5 ' >
-                                    <span className='group-hover:border-b group-hover:border-dotted'>Phones</span>
-                                    <IoIosArrowForward className='text-gray-400  group-hover:text-black ' />
-                                </li>
+                            <li className='flex justify-between items-center w-full cursor-pointer group'>
+                                <span className='group-hover:border-b group-hover:border-dotted'>
+                                    {mainCat}
+                                </span>
+                                <IoIosArrowForward className='text-gray-400 group-hover:text-black' />
+                            </li>
+                        </ul>
+                    ))}
 
 
-
-
+                    {activeCategory && (
+                        <div
+                            ref={subCategoryRef}
+                            className="absolute left-full top-0 ml-2 bg-white shadow-lg rounded z-50 w-56"
+                        >
+                            <ul>
+                                {categoryMap[activeCategory].map((subCat, i) => (
+                                    <li
+                                        key={i}
+                                        className='flex justify-between hover:bg-gray-200 items-center w-full cursor-pointer group p-4'
+                                    >
+                                        <span className='group-hover:border-b group-hover:border-dotted'>
+                                            {subCat}
+                                        </span>
+                                        <IoIosArrowForward className='text-gray-400 group-hover:text-black' />
+                                    </li>
+                                ))}
                             </ul>
                         </div>
-
-                    }
-
+                    )}
                 </div>
 
 
-                <div className=' min-w-[312px] h-[150px] px-5 md:w-[60%] md:h-122.25 banner-slider ' >
+                <div className='min-w-78 h-37.5 px-5 md:w-[60%] md:h-full banner-slider'>
                     <Slider {...settings}>
                         {items.map((item) => (
-                            <div key={item.id} className=" w-full h-122.25">
+                            <div key={item.id} className="w-full h-full">
                                 <div className="relative w-full h-full rounded overflow-hidden">
                                     <img
                                         src={item.img}
                                         alt={item.text}
-                                        className="w-full h-[150px] md:h-full object-cover"
-                                    />                                  
+                                        className="w-full h-37.5 md:h-132.25 object-cover"
+                                    />
                                 </div>
                             </div>
                         ))}
                     </Slider>
                 </div>
 
-                <div className='w-[20%] hidden md:block h-122.25 border' >3</div>
-            </div>
 
+                <div className='w-[20%] hidden md:block '>
+                    <RightCard/>
+                </div>
+
+            </div>
         </Container>
     )
 }
 
-export default Banner
+export default Banner;

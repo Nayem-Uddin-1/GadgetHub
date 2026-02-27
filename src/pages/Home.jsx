@@ -9,16 +9,13 @@ import NewArrival from '../components/newarrival/NewArrival'
 function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      
       <Banner />
       <CategoryCards />
       <NewArrival />
       <FeatureBar />
       <CommonFeaturedProduct />
       <PromoBanner />
-
-
-
 
     </>
   )

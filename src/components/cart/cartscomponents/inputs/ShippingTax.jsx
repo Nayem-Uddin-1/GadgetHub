@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { LuChevronDown } from 'react-icons/lu';
 import { FaArrowLeft, FaCreditCard } from 'react-icons/fa';
 
@@ -8,6 +8,7 @@ import { FaArrowLeft, FaCreditCard } from 'react-icons/fa';
 
 function ShippingTax() {
 
+     const navigate =useNavigate()
     const amount = "$211.63";
 
     const [formData, setFormData] = useState({
@@ -22,6 +23,16 @@ function ShippingTax() {
     };
 
     const [isShippingOpen, setIsShippingOpen] = useState(false)
+
+
+    const handleCheckout =(e)=>{
+        console.log("Checkout");  
+        
+        setTimeout(()=>{
+            navigate("/checkout")
+        },1000)
+    }
+    
 
     return (
         <>   <div className="panel-heading my-5 ">
@@ -140,12 +151,12 @@ function ShippingTax() {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                    <button className="w-full flex items-center justify-center gap-2 py-3 border border-gray-800 bg-white text-gray-700 hover:bg-gray-50 transition-colors">
-                        <FaArrowLeft className="text-sm" />
-                        Continue Shopping
-                    </button>
+                    <Link to={"/"} className="w-full flex items-center justify-center gap-2 py-3 border border-gray-800 bg-white text-gray-700 hover:bg-gray-50 transition-colors">
 
-                    <button className="w-full flex items-center justify-center gap-2 py-3 bg-[#1e2124] text-white font-medium hover:bg-black transition-colors">
+                        Continue Shopping
+                    </Link>
+
+                    <button onClick={handleCheckout} className="w-full flex items-center justify-center gap-2 py-3 bg-[#1e2124] text-white font-medium hover:bg-black transition-colors">
                         <FaCreditCard className="text-sm" />
                         Checkout
                     </button>
