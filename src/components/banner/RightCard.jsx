@@ -38,7 +38,7 @@ const topSellers = [
 
 const RightCard = () => {
   return (
-    <div className=" w-full h-full bg-white font-sans text-gray-800">
+    <div className=" p-5 w-full h-full bg-white font-sans text-gray-800">
       <h2 className="text-lg font-bold  ">Top Sellers</h2>
       <div className="flex flex-col">
         {topSellers.map((item, index) => (
